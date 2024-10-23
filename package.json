@@ -1,0 +1,19 @@
+{
+  "name": "insight",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Walker",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthonyy-walker/InSight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anthonyy-walker/InSight/issues"
+  },
+  "homepage": "https://github.com/anthonyy-walker/InSight#readme"
+}
