@@ -5,9 +5,7 @@ let video = document.getElementById("webcam");
 let canvas = document.getElementById("output_canvas");
 let canvasCtx = canvas.getContext("2d");
 
-// Initializing the object detector
 export const initializeObjectDetector = async () => {
-  console.log("Initializing Object Detector...");
   try {
     const vision = await FilesetResolver.forVisionTasks(
       "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.2/wasm"
@@ -15,11 +13,11 @@ export const initializeObjectDetector = async () => {
     
     objectDetector = await ObjectDetector.createFromOptions(vision, {
       baseOptions: {
-        modelAssetPath: `https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite0/float16/1/efficientdet_lite0.tflite`,
+        modelAssetPath: `https://storage.googleapis.com/mediapipe-models/object_detector/efficientdet_lite2/float32/1/efficientdet_lite2.tflite`,
         delegate: "GPU"
       },
       runningMode: "VIDEO",
-      scoreThreshold: 0.7
+      scoreThreshold: 0.2,
     });
     console.log("Object Detector initialized.");
   } catch (error) {
@@ -27,55 +25,39 @@ export const initializeObjectDetector = async () => {
   }
 };
 
-// Enables webcam
-export const enableCam = async () => {
-  const constraints = { video: true };
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-    video.srcObject = stream;
-    predictWebcam();  
-  } catch (error) {
-    console.error("Error accessing webcam:", error);
-    alert("Error accessing webcam.");
-  }
-};
-
-// Predicts objects using the webcam
-async function predictWebcam() {
+export const predictObjects = async () => {
   if (!objectDetector) {
-    console.warn("Object Detector not initialized yet.");
     return;
   }
 
   const nowInMs = performance.now();
   const results = await objectDetector.detectForVideo(video, nowInMs);
 
-  // Clear canvas and draw the bounding boxes
-  canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
-
   if (results && results.detections) {
+    const videoWidth = video.videoWidth;
+    const videoHeight = video.videoHeight;
+    const scaleX = canvas.width / videoWidth;
+    const scaleY = canvas.height / videoHeight;
+
     results.detections.forEach(detection => {
-      // Draw the bounding box and label for each detection
+      const x = detection.boundingBox.originX * scaleX;
+      const y = detection.boundingBox.originY * scaleY;
+      const width = detection.boundingBox.width * scaleX;
+      const height = detection.boundingBox.height * scaleY;
+
+      // Draw the bounding box for object detection
       canvasCtx.beginPath();
-      canvasCtx.rect(
-        detection.boundingBox.originX,
-        detection.boundingBox.originY,
-        detection.boundingBox.width,
-        detection.boundingBox.height
-      );
+      canvasCtx.rect(x, y, width, height);
       canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'green';
+      canvasCtx.strokeStyle = 'green';  // Green for objects
       canvasCtx.stroke();
       canvasCtx.font = "14px Arial";
-      canvasCtx.fillStyle = 'red';
+      canvasCtx.fillStyle = 'red';  // Red for object labels
       canvasCtx.fillText(
         `${detection.categories[0].categoryName} (${Math.round(detection.categories[0].score * 100)}%)`,
-        detection.boundingBox.originX,
-        detection.boundingBox.originY > 10 ? detection.boundingBox.originY - 5 : 10
+        x,
+        y > 10 ? y - 5 : 10
       );
     });
   }
-
-  // Request the next frame for detection
-  window.requestAnimationFrame(predictWebcam);
-}
+};
