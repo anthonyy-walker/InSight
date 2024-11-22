@@ -1,0 +1,335 @@
+{
+  "images": [
+    {
+      "image_id": "1",
+      "timestamp": "2024-11-21T09:00:00.000Z",
+      "location": {
+        "latitude": 42.27976051915981,
+        "longitude": -83.73138012049172
+      },
+      "environment": {
+        "type": "Cafeteria",
+        "features": [
+          "Tables and chairs",
+          "Serving stations",
+          "Large windows",
+          "Indoor lighting"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "Eating",
+          "Studying",
+          "Socializing"
+        ]
+      },
+      "text_elements": {
+        "notable": "Menu displays and serving stations"
+      },
+      "people": {
+        "actions": [
+          "Walking",
+          "Sitting",
+          "Eating"
+        ],
+        "demographic": "Black 1, Unknown 5"
+      },
+      "description": "A busy university cafeteria during morning hours with students engaged in various activities such as studying and socializing."
+    },
+    {
+      "image_id": "2",
+      "timestamp": "2024-11-21T10:30:00.000Z",
+      "location": {
+        "latitude": 42.27914972881227,
+        "longitude": -83.73187946154137
+      },
+      "environment": {
+        "type": "campus walkway",
+        "features": [
+          "pathway",
+          "trees",
+          "lampposts",
+          "buildings"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "walking",
+          "commuting",
+          "socializing"
+        ]
+      },
+      "text_elements": {
+        "notable": ""
+      },
+      "people": {
+        "actions": [
+          "walking"
+        ],
+        "demographic": "Unknown 12"
+      },
+      "description": "A group of students walking along a pathway on a university campus, surrounded by trees and buildings. The weather appears overcast."
+    },
+    {
+      "image_id": "3",
+      "timestamp": "2024-11-21T12:00:00.000Z",
+      "location": {
+        "latitude": 42.27765006096259,
+        "longitude": -83.73397137071555
+      },
+      "environment": {
+        "type": "lecture hall",
+        "features": [
+          "projector screens",
+          "lectern",
+          "desks",
+          "chairs",
+          "acoustic ceiling"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "lecture",
+          "note-taking",
+          "presentation"
+        ]
+      },
+      "text_elements": {
+        "notable": "Computing's Impact on Justice: From Text to the Web\n7 – Artificial Intelligence and Machine Learning"
+      },
+      "people": {
+        "actions": [
+          "listening",
+          "taking notes",
+          "engaging in discussion"
+        ],
+        "demographic": "1 White, 1 African American, 1 Unknown"
+      },
+      "description": "A university lecture hall setting with students attending a class on artificial intelligence and its impact on justice. The instructor is at the front presenting lectures displayed on screens."
+    },
+    {
+      "image_id": "4",
+      "timestamp": "2024-11-21T13:30:00.000Z",
+      "location": {
+        "latitude": 42.28259865024387,
+        "longitude": -83.73355551009055
+      },
+      "environment": {
+        "type": "public transportation",
+        "features": [
+          "bus interior",
+          "blue seats",
+          "yellow handrails",
+          "windows showing outside scenery",
+          "suspended ceiling lights"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "commuting",
+          "waiting",
+          "listening to music",
+          "reading"
+        ]
+      },
+      "text_elements": {
+        "notable": "WATCH YOUR STEP"
+      },
+      "people": {
+        "actions": [
+          "sitting",
+          "waiting"
+        ],
+        "demographic": "African American 1, Unknown 3"
+      },
+      "description": "The image depicts the interior of a bus, showing a few people sitting quietly. The bus features blue seats and yellow handrails, typical of public transportation. The atmosphere suggests a commuter environment, with people waiting or traveling."
+    },
+    {
+      "image_id": "5",
+      "timestamp": "2024-11-21T15:00:00.000Z",
+      "location": {
+        "latitude": 42.275738824408634,
+        "longitude": -83.73522491737432
+      },
+      "environment": {
+        "type": "classroom",
+        "features": [
+          "desks",
+          "computer screens",
+          "projector",
+          "blackboard",
+          "windows"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "attending a lab session",
+          "using laptops",
+          "participating in discussions",
+          "taking notes"
+        ]
+      },
+      "text_elements": {
+        "notable": "LAB 10 EECS183"
+      },
+      "people": {
+        "actions": [
+          "working on laptops",
+          "taking notes",
+          "engaged in discussions"
+        ],
+        "demographic": "White 3, Black 2, Asian 2, Unknown 3"
+      },
+      "description": "A university classroom setting where students are engaged in a lab session, using laptops, and following along with a presentation on the projector. Various features include desks arranged for group work, and students actively participating in their assignments."
+    },
+    {
+      "image_id": "6",
+      "timestamp": "2024-11-21T16:30:00.000Z",
+      "location": {
+        "latitude": 42.289681762246886,
+        "longitude": -83.72085182876387
+      },
+      "environment": {
+        "type": "music practice room",
+        "features": [
+          "piano",
+          "soundproofing",
+          "mirror",
+          "plain walls"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "practicing piano",
+          "music study",
+          "sound recording"
+        ]
+      },
+      "text_elements": {
+        "notable": "Please do not place food or drinks in this room."
+      },
+      "people": {
+        "actions": [
+          "playing piano",
+          "practicing"
+        ],
+        "demographic": "African American 1"
+      },
+      "description": "A small music practice room at the University of Michigan, featuring a black upright piano and basic soundproofing elements. The room is minimalistic, designed for individual practice."
+    },
+    {
+      "image_id": "7",
+      "timestamp": "2024-11-21T18:00:00.000Z",
+      "location": {
+        "latitude": 42.28225716414648,
+        "longitude": -83.74572653739224
+      },
+      "environment": {
+        "type": "indoor",
+        "features": [
+          "sitting area",
+          "tables",
+          "chairs",
+          "television",
+          "blue accent wall",
+          "overhead lighting"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "studying",
+          "socializing",
+          "using a laptop"
+        ]
+      },
+      "text_elements": {
+        "notable": "none"
+      },
+      "people": {
+        "actions": [
+          "sitting",
+          "working on a laptop"
+        ],
+        "demographic": "African American"
+      },
+      "description": "The image depicts an indoor space with a sitting area featuring couches, tables, and a television. A person is working on a laptop at a table. The environment appears to be designed for studying and socializing."
+    },
+    {
+      "image_id": "8",
+      "timestamp": "2024-11-21T19:30:00.000Z",
+      "location": {
+        "latitude": 42.28084911447749,
+        "longitude": -83.728798579661
+      },
+      "environment": {
+        "type": "indoor dining area",
+        "features": [
+          "modern design",
+          "multiple seating arrangements",
+          "light fixtures",
+          "large windows for natural light"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "eating",
+          "socializing",
+          "studying",
+          "working"
+        ]
+      },
+      "text_elements": {
+        "notable": ""
+      },
+      "people": {
+        "actions": [
+          "sitting",
+          "walking",
+          "talking",
+          "eating"
+        ],
+        "demographic": "Unknown"
+      },
+      "description": "A spacious indoor dining area at a university, featuring modern architecture and various groups of students engaged in dining, studying, and social interaction."
+    },
+    {
+      "image_id": "9",
+      "timestamp": "2024-11-21T21:00:00.000Z",
+      "location": {
+        "latitude": 42.27976051915981,
+        "longitude": -83.73138012049172
+      },
+      "environment": {
+        "type": "University Campus",
+        "features": [
+          "Pathway",
+          "Grass",
+          "Trees",
+          "Buildings",
+          "Street Lamps"
+        ]
+      },
+      "activities": {
+        "possible": [
+          "Walking",
+          "Socializing",
+          "Studying"
+        ]
+      },
+      "text_elements": {
+        "notable": "University of Michigan, Mosher Jordan Hall"
+      },
+      "people": {
+        "actions": [
+          "Walking",
+          "Carrying backpacks"
+        ],
+        "demographic": "White 3, Black 6, Asian 4, Unknown 2"
+      },
+      "description": "A group of students walking along a pathway on the University of Michigan campus, with buildings and trees in the background."
+    }
+  ],
+  "connection": {
+    "description": "On November 21, 2024, the user began their day at 9:00 AM in the cafeteria, where they enjoyed eating while studying and socializing. By 10:30 AM, they moved to a campus walkway for some commuting and socializing while walking. At noon, they attended a lecture in a lecture hall, engaging in note-taking and discussions. The user then commuted using public transportation at 1:30 PM, taking time to wait, listen to music, and read. By 3:00 PM, they participated in a lab session in a classroom, focusing on discussions and laptop work. Later, at 4:30 PM, they practiced piano and studied in a music practice room. The evening saw the user studying and socializing in an indoor space at 6:00 PM before enjoying dinner and more socializing in an indoor dining area at 7:30 PM, where they also studied and worked. The day concluded with a leisurely walk around the"
+  }
+}
